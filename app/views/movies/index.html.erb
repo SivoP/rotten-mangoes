@@ -1,5 +1,5 @@
-    <h1>Rotten Mangoes</h1>
-    <%= link_to "Submit a movie!" new_movie_path %>
+<h1>Rotten Mangoes</h1>
+    <%= link_to "Submit a movie!", new_movie_path %>
     <hr>
     <% @movies.each do |movie| %>
       <%= link_to image_tag(movie.poster_image_url), movie_path(movie) %>
@@ -8,4 +8,7 @@
       <h4>Dir. <%= movie.director %> | <%= movie.runtime_in_minutes %> minutes</h4>
       <p><%= movie.description %></p>
       <hr>
+     
     <% end %>
+   
+
