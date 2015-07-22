@@ -24,6 +24,7 @@ class MoviesController < ApplicationController
         else
           render :new
         end
+
       end
 
       def update
@@ -50,4 +51,4 @@ class MoviesController < ApplicationController
         )
       end
 
-    end
+end
