@@ -1,7 +1,7 @@
 RottenMangoes::Application.routes.draw do
 
 
-      resources :admin, only: [:index]
+      resources :admin, only: [:index,:create,:new]
       resources :movies do
         resources :reviews, only: [:new, :create, :index]
       end
