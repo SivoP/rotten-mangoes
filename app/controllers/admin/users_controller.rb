@@ -31,7 +31,14 @@ class Admin::UsersController < ApplicationController
     @user.update(user_params)
     redirect_to admin_users_path, notice: "user with user ID '#{@user.id} just got updated!'"
    end
- 
+
+   def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to admin_users_path 
+  end
+
+
   protected
   def user_params
     params.require(:user).permit(:email, :firstname, :lastname, :password, :password_confirmation, :admin,)
