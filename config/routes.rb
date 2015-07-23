@@ -11,7 +11,7 @@ RottenMangoes::Application.routes.draw do
 
 
       namespace :admin do 
-        resources :users, except: [:show]
+        resources :users
       end
   end
 

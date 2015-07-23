@@ -1,0 +1,20 @@
+<h1> Here is <%= @user.firstname %>'s information </h1>
+
+<table>
+
+  <table>
+    <tr>
+      <th> First Name </th>
+      <th> Last Name </th>
+      <th> Email </th>
+      <th> Admin? </th>
+    </tr>
+    <tr>
+      <td> <%= @user.lastname %> </td>
+      <td> <%= @user.email %> </td>
+      <td> <%= @user.admin %> </td>
+      <td> <%= link_to "delete", admin_user_path(@user), method: :delete %> </td>
+    </tr>
+
+
+</table>
