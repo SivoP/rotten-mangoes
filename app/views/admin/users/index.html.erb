@@ -1,11 +1,22 @@
 <h1> Here are all users </h1>
 
-<% @users.each do |user| %>
-  <div>
-    <%= user.firstname  %>
-    <%= user.lastname  %>
-    <%= user.email  %>
-  </div>
 
+<%= paginate @users %>
+<% @users.each do |user| %>
+
+  <table>
+    <tr>
+      <th> Email </th>
+      <th> First Name </th>
+      <th> Last Name </th>
+      <th> Admin? </th>
+    </tr>
+    <tr>
+      <td> <%= user.firstname %> </td>
+      <td> <%= user.lastname %> </td>
+      <td> <%= user.email %> </td>
+      <td> <%= user.admin %> </td>
+    </tr>
+  </table>
 
   <% end %>

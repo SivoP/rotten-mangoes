@@ -1,10 +1,12 @@
 class Admin::UsersController < ApplicationController
 
+
+
   before_filter :restrict_access
   before_action :require_admin, only: [:index]
  
    def index
-     @users = User.all
+     @users = User.order(:firstname).page(params[:page]).per(5)
    end
 
   def new
