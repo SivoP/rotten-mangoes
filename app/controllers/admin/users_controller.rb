@@ -22,6 +22,15 @@ class Admin::UsersController < ApplicationController
     #   render :new
  end 
 
+   def edit
+    @user = User.find(params[:id])
+   end
+
+   def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    redirect_to admin_users_path, notice: "user with user ID '#{@user.id} just got updated!'"
+   end
  
   protected
   def user_params
