@@ -4,6 +4,12 @@
       protect_from_forgery with: :exception
 
       protected
+      def require_admin
+        unless current_user.admin?
+          redirect_to new_session_path
+           flash[:alert] = "Your are not an admin!"
+        end
+      end
 
       def restrict_access
         if !current_user

@@ -1,8 +1,12 @@
 class SessionsController < ApplicationController
+  before_action :require_admin, only: [:index]
 
   def new
   end
 
+  def index
+    "abc"
+  end
  def create
     user = User.find_by(email: params[:email])
 
