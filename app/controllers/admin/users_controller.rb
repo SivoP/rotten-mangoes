@@ -18,11 +18,15 @@ class Admin::UsersController < ApplicationController
     @user.save
     #   session[:user_id] = @user.id
       redirect_to admin_users_path, notice: "Just created new user: #{@user.firstname}!"
-    else
-      render :new
-    end
+    # else
+    #   render :new
+ end 
 
-    
+ 
+  protected
+  def user_params
+    params.require(:user).permit(:email, :firstname, :lastname, :password, :password_confirmation, :admin,)
+  end
  end
 
 
