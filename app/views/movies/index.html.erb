@@ -1,7 +1,6 @@
 <h1>Rotten Mangoes</h1>
 
     <%= link_to "Submit a movie!", new_movie_path %>
-     
     <%= form_tag('/search', method: "get")  do %>
       <div>
         <%= label_tag(:query, "title:") %><br/>
@@ -10,24 +9,14 @@
       <div>
       <%= label_tag(:duration, "duration") %>
         <%= select_tag(:duration, options_for_select([["n/a"],["short"], ["medium"], ["long"]])) %>
-
       </div>
-
       <div><%= submit_tag("Search") %></div>
     <% end %>
 
-
-
     <hr>
     <% @movies.each do |movie| %>
-      <%= link_to image_tag(movie.poster_image_url), movie_path(movie) %>
-      <h2><%= link_to movie.title, movie_path(movie) %></h2>
-      <%= image_tag movie.image_url if movie.image? %>
-      <h3><%= movie.release_date %></h3>
-      <h4>Dir. <%= movie.director %> | <%= movie.runtime_in_minutes %> minutes</h4>
-      <p><%= movie.description %></p>
-      <hr>
-     
+    <%= link_to image_tag(movie.poster_image_url), movie_path(movie) %>
+      <%= render partial: 'movie', object: movie %>
     <% end %>
    
 

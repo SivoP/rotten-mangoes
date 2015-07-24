@@ -1,0 +1,7 @@
+
+<h2><%= link_to movie.title, movie_path(movie) %></h2>
+      <%= image_tag movie.image_url if movie.image? %>
+      <h3><%= movie.release_date %></h3>
+      <h4>Dir. <%= movie.director %> | <%= movie.runtime_in_minutes %> minutes</h4>
+      <p><%= movie.description %></p>
+      <hr>
