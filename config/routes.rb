@@ -1,4 +1,6 @@
 RottenMangoes::Application.routes.draw do
+
+
   resources :admin, only: [:index,:create,:new]
   resources :movies do
     resources :reviews, only: [:new, :create, :index]
@@ -9,6 +11,7 @@ RottenMangoes::Application.routes.draw do
       post :preview_mode
     end
   end
+  
   root to: 'movies#index'
 
   namespace :admin do 
