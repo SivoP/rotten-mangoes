@@ -1,13 +1,34 @@
 class MoviesController < ApplicationController
 
+    # def index
+    #   @movies = Movie.all
+    #   if params[:search]
+    #       @movies =  @movies = Movie.search(params[:title])
+    #   else 
+    #       @movies = Movie.all
+    #   end       
+    # end
+
     def index
       @movies = Movie.all
-      if params[:search]
-          @movies =  @movies = Movie.search(params[:search])
-      else 
-          @movies = Movie.all
-      end       
     end
+
+    def search
+      @movies = Movie.query(params[:query])
+
+      case params[:duration]
+      when "short"
+        @movies = @movies.short
+      when "medium"
+        @movies = @movies.medium
+      when "long"
+        @movies = @movies.long
+      else
+        @movies 
+      end
+     
+    end
+
 
     def show
       @movie = Movie.find(params[:id])
