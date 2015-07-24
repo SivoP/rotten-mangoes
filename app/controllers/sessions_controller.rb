@@ -1,5 +1,5 @@
-class SessionsController < ApplicationController
-  before_action :require_admin, only: [:index]
+ class SessionsController < ApplicationController
+ before_action :require_admin, only: [:index]
 
   def new
   end
@@ -34,7 +34,7 @@ def check_for_admin_redirect
   if user.admin?
     render 'layouts/admin'
   else
-    redire_to movies_path
+    redirect_to movies_path
   end
 end
 

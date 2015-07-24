@@ -7,7 +7,7 @@ RottenMangoes::Application.routes.draw do
     resources :reviews, only: [:new, :create, :index]
   end
   resources :users, only: [:new, :create]
-  resources :sessions, only: [:new, :create, :destroy, :index] do 
+  resource :session, only: [:new, :create, :destroy, :index] do 
     member do 
       post :preview_mode
     end
@@ -16,6 +16,5 @@ RottenMangoes::Application.routes.draw do
   namespace :admin do 
     resources :users
   end
-
 end
 

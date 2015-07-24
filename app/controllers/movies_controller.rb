@@ -17,7 +17,7 @@ class MoviesController < ApplicationController
       @movies = Movie.query(params[:query])
 
       case params[:duration]
-      when "short"
+      when "short" 
         @movies = @movies.short
       when "medium"
         @movies = @movies.medium

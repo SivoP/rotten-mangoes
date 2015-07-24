@@ -1,0 +1,80 @@
+Searching 152 files for "sessions"
+
+/Users/sivanshpadhy/lighthouse/rottenmangoes/rotten_mangoes/app/assets/stylesheets/sessions.css.scss:
+    1: // Place all the styles related to the sessions controller here.
+    2  // They will automatically be included in application.css.
+    3  // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/Users/sivanshpadhy/lighthouse/rottenmangoes/rotten_mangoes/app/controllers/sessions_controller.rb:
+    1: class SessionsController < ApplicationController
+    2    before_action :require_admin, only: [:index]
+    3  
+
+/Users/sivanshpadhy/lighthouse/rottenmangoes/rotten_mangoes/app/helpers/sessions_helper.rb:
+    1: module SessionsHelper
+    2  end
+    3  
+
+/Users/sivanshpadhy/lighthouse/rottenmangoes/rotten_mangoes/app/views/sessions/create.html.erb:
+    1: <h1>Sessions#create</h1>
+    2: <p>Find me in app/views/sessions/create.html.erb</p>
+    3  
+
+/Users/sivanshpadhy/lighthouse/rottenmangoes/rotten_mangoes/app/views/sessions/new.html.erb:
+    1   <h1>Log In</h1>
+    2:     <%= form_tag session_path do %>
+    3        <div>
+    4          <%= label_tag "email" %><br/>
+
+/Users/sivanshpadhy/lighthouse/rottenmangoes/rotten_mangoes/config/routes.rb:
+    8    end
+    9    resources :users, only: [:new, :create]
+   10:   resources :sessions, only: [:new, :create, :destroy, :index] do 
+   11      member do 
+   12        post :preview_mode
+
+~/lighthouse/rottenmangoes/rotten_mangoes/log/development.log:
+    <binary>
+
+/Users/sivanshpadhy/lighthouse/rottenmangoes/rotten_mangoes/test/controllers/sessions_controller_test.rb:
+    1  require 'test_helper'
+    2  
+    3: class SessionsControllerTest < ActionController::TestCase
+    4    test "should get new" do
+    5      get :new
+
+/Users/sivanshpadhy/lighthouse/rottenmangoes/rotten_mangoes/test/helpers/sessions_helper_test.rb:
+    1  require 'test_helper'
+    2  
+    3: class SessionsHelperTest < ActionView::TestCase
+    4  end
+    5  
+
+~/lighthouse/rottenmangoes/rotten_mangoes/tmp/cache/assets/development/sass/0256bd58cce41a8582a3976327dfe282b52641be/sessions.css.scssc:
+    <binary>
+
+~/lighthouse/rottenmangoes/rotten_mangoes/tmp/cache/assets/development/sprockets/0335d87ebd93523744c2fec4426f4432:
+    <binary>
+
+~/lighthouse/rottenmangoes/rotten_mangoes/tmp/cache/assets/development/sprockets/0dcccf3cf5085ef5fb5e5a857889dad0:
+    <binary>
+
+~/lighthouse/rottenmangoes/rotten_mangoes/tmp/cache/assets/development/sprockets/0f8aa08bcb16235a9f63bb55b7cdaad8:
+    <binary>
+
+~/lighthouse/rottenmangoes/rotten_mangoes/tmp/cache/assets/development/sprockets/67eb859757910e1082d8534cbce75a2a:
+    <binary>
+
+~/lighthouse/rottenmangoes/rotten_mangoes/tmp/cache/assets/development/sprockets/73d5b3d4a4584cbe9dfa3937b134c007:
+    <binary>
+
+~/lighthouse/rottenmangoes/rotten_mangoes/tmp/cache/assets/development/sprockets/8a0e7cc1ca5e1af0b1a30ac42ea00e1a:
+    <binary>
+
+~/lighthouse/rottenmangoes/rotten_mangoes/tmp/cache/assets/development/sprockets/d771ace226fc8215a3572e0aa35bb0d6:
+    <binary>
+
+~/lighthouse/rottenmangoes/rotten_mangoes/tmp/cache/assets/development/sprockets/f7cbd26ba1d28d48de824f0e94586655:
+    <binary>
+
+1927 matches across 18 files
